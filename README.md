@@ -16,6 +16,8 @@ query commands. Remediations are shown as text for you to review and run.
 
 ![Detail](https://github.com/koepnick/avcscope/blob/main/example/detail.png)
 
+![Demo Data](https://github.com/koepnick/avcscope/blob/main/example/demo.png)
+
 ## Note
 > This tool was created for my own convenience. I will likely add features as 
 > I need them but do not intend to expand the root scope.
