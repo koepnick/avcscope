@@ -64,13 +64,13 @@ rustup target add aarch64-unknown-linux-musl
 cargo build --release --target aarch64-unknown-linux-musl
 ```
 
-## STDIN
+### STDIN
 sudo ausearch -m AVC,USER_AVC,SELINUX_ERR -ts today | avcscope
 
-## Target log file
+### Target log file
 avcscope --file /var/log/audit/audit.log
 
-## Best guess
+### Best guess
 avcscope          # auto: ausearch -> audit.log -> demo
 ```
 
