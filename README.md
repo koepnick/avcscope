@@ -12,6 +12,10 @@ It **cannot** change anything: no `setenforce`, `setsebool`, `semanage`,
 `semodule`, or `restorecon`. It only reads logs and (optionally) runs read-only
 query commands. Remediations are shown as text for you to review and run.
 
+![Main](https://github.com/koepnick/avcscope/blob/main/example/main.png)
+
+![Detail](https://github.com/koepnick/avcscope/blob/main/example/detail.png)
+
 ## Note
 > This tool was created for my own convenience. I will likely add features as 
 > I need them but do not intend to expand the root scope.
