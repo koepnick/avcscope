@@ -51,7 +51,6 @@ cargo build --release
 ## Build & run (aarch64)
 > Be sure that you have an aarch64 linker on your $PATH
 
-## Usage
 ```sh
 # TLDR
 make static_aarch64
@@ -63,17 +62,21 @@ make static_aarch64
 rustup target add aarch64-unknown-linux-musl
 cargo build --release --target aarch64-unknown-linux-musl
 ```
+---
+
+## Usage
+
 
 ### STDIN
-sudo ausearch -m AVC,USER_AVC,SELINUX_ERR -ts today | avcscope
+`sudo ausearch -m AVC,USER_AVC,SELINUX_ERR -ts today | avcscope`
 
 ### Target log file
-avcscope --file /var/log/audit/audit.log
+`avcscope --file /var/log/audit/audit.log`
 
 ### Best guess
-avcscope          # auto: ausearch -> audit.log -> demo
-```
+`avcscope          # auto: ausearch -> audit.log -> demo`
 
+---
 
 
 
