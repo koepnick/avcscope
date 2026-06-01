@@ -24,7 +24,7 @@ query commands. Remediations are shown as text for you to review and run.
 >
 > Suggestions are welcome.
 
-## Build & run
+## Build & run (x86_64)
 
 ```sh
 
@@ -48,8 +48,21 @@ cargo build --release --target x86_64-unknown-linux-musl
 cargo build --release
 ```
 
+## Build & run (aarch64)
+> Be sure that you have an aarch64 linker on your $PATH
+
 ## Usage
 ```sh
+# TLDR
+make static_aarch64
+```
+
+— or —
+```sh
+# Static
+rustup target add aarch64-unknown-linux-musl
+cargo build --release --target aarch64-unknown-linux-musl
+```
 
 ## STDIN
 sudo ausearch -m AVC,USER_AVC,SELINUX_ERR -ts today | avcscope
