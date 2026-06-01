@@ -27,6 +27,11 @@ jobs:
       run: |
         cargo build --release
         cp target/release/avcscope ./artifacts/avcscope
+    - name: Build Static (aarch64)
+      run: |
+        apt-get install -y gcc-aarch64-linux-gnu
+        cargo build --release --target aarch64-unknown-linux-musl
+        cp target/aarch64-unknown-linux-musl/release/avcscope ./artifacts/avcscope-static-aarch64
     - name: Run tests
       run: cargo test --verbose
     - uses: actions/upload-artifact@v7.0.1
