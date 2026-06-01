@@ -19,6 +19,10 @@ query commands. Remediations are shown as text for you to review and run.
 
 ```sh
 
+# TLDR
+`make`
+`sudo make install`
+
 # Basic
 cargo build --release
 ./target/release/avcscope --demo
