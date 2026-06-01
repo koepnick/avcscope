@@ -1,8 +1,5 @@
 # avcscope
 
-## Note
-This tool was created for my own convenience. I will likely add features as 
-I need them but do not intend to expand the root scope.
 
 ---
 
@@ -15,17 +12,23 @@ It **cannot** change anything: no `setenforce`, `setsebool`, `semanage`,
 `semodule`, or `restorecon`. It only reads logs and (optionally) runs read-only
 query commands. Remediations are shown as text for you to review and run.
 
+## Note
+> This tool was created for my own convenience. I will likely add features as 
+> I need them but do not intend to expand the root scope.
+>
+> Suggestions are welcome.
+
 ## Build & run
 
 ```sh
 
 # TLDR
-`make`
-`sudo make install`
+make
+sudo make install
+```
 
-# Basic
-cargo build --release
-./target/release/avcscope --demo
+— or —
+```sh
 
 # Static (recommended)
 rustup target add x86_64-unknown-linux-musl
@@ -43,6 +46,16 @@ avcscope --file /var/log/audit/audit.log
 ## Best guess
 avcscope          # auto: ausearch -> audit.log -> demo
 ```
+
+— or —
+
+```sh
+
+# Basic
+cargo build --release
+./target/release/avcscope --demo
+```
+
 
 > **Toolchain note:** `Cargo.lock` pins `instability`/`darling` to versions that
 > build on older rustc (tested on **rustc 1.75**, Ubuntu 24.04). On a recent
