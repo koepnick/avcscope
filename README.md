@@ -77,16 +77,6 @@ key — "`httpd_t` denied `read` on `user_home_t`" is one problem whether it hit
 file or 500. The distinct paths and pids are still preserved inside the group
 and shown in the detail pane.
 
-## Layout
-
-```
-src/
-  main.rs      app state, vim event loop, ratatui rendering
-  avc.rs       AVC line parser, data model, de-duplication (+ unit tests)
-  selinux.rs   status detection, denial sources, demo data
-  hints.rs     read-only diagnosis engine
-```
-
 ## Tests
 
 ```sh
