@@ -39,9 +39,17 @@ sudo make install
 # Static (recommended)
 rustup target add x86_64-unknown-linux-musl
 cargo build --release --target x86_64-unknown-linux-musl
-./target/x86_64-unkonwn-linux-musl/release/avcscope --demo
+```
+— or —
 
-# With live data
+```sh
+
+# Standard
+cargo build --release
+```
+
+## Usage
+```sh
 
 ## STDIN
 sudo ausearch -m AVC,USER_AVC,SELINUX_ERR -ts today | avcscope
@@ -53,14 +61,7 @@ avcscope --file /var/log/audit/audit.log
 avcscope          # auto: ausearch -> audit.log -> demo
 ```
 
-— or —
 
-```sh
-
-# Basic
-cargo build --release
-./target/release/avcscope --demo
-```
 
 
 > **Toolchain note:** `Cargo.lock` pins `instability`/`darling` to versions that
