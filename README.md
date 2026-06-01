@@ -1,8 +1,10 @@
 # avcscope
 
-[!Note]
+## Note
 This tool was created for my own convenience. I will likely add features as 
 I need them but do not intend to expand the root scope.
+
+---
 
 A **read-only** terminal UI (Rust + [ratatui](https://ratatui.rs)) for triaging
 SELinux AVC denials. It parses denials, de-duplicates them, shows the live
